@@ -1,6 +1,6 @@
 # 🏦 Fintech Credit Risk Scoring & Default Prediction Engine
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://YOUR-STREAMLIT-APP-URL.streamlit.app](https://malaysia-credit-risk-scoring-9ktxq3khsmzcgncgd46x4p.streamlit.app/#key-risk-drivers))
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://YOUR-STREAMLIT-APP-URL.streamlit.app](https://malaysia-credit-risk-scoring-9ktxq3khsmzcgncgd46x4p.streamlit.app/#key-risk-drivers)
 
 ## Executive Summary
 This project builds an end-to-end machine learning credit risk engine designed for digital banks and BNPL (Buy-Now-Pay-Later) platforms. Built using financial borrower data (~150k records), the pipeline handles dirty real-world data, engineers domain-specific financial risk metrics, predicts 2-year default probability using **XGBoost**, and translates raw risk probabilities into a standard **300–850 Credit Score**.
