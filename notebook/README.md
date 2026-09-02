@@ -46,3 +46,14 @@ To align with **Bank Negara Malaysia (BNM)** regulatory standards regarding mode
        ▼
 [Production Deployment] ────────► (Interactive Streamlit Dashboard)
 ```
+
+## 📁 Repository Architecture
+```text
+malaysia-credit-risk-scoring/
+├── app/
+│   └── app.py               <- Streamlit interactive web application
+├── notebooks/
+│   └── credit_scoring.ipynb  <- Data cleaning, EDA, feature engineering & model training
+├── requirements.txt         <- Project dependencies
+└── README.md                <- Executive summary & technical documentation
+```
