@@ -56,9 +56,29 @@ if st.sidebar.button("Evaluate Credit Risk"):
             
     st.markdown("---")
     st.subheader("Key Risk Drivers")
+    
+    # Dynamic list of risk factors to display
+    risk_factors_found = False
+    
     if utilization > 0.8:
-        st.write("⚠️ **High Utilization:** Credit utilization is above 80%, indicating financial distress.")
+        st.write("⚠️ **High Utilization:** Credit utilization is above 80%, indicating potential financial distress.")
+        risk_factors_found = True
+    elif utilization > 0.5:
+        st.write("ℹ️ **Moderate Utilization:** Credit utilization is above 50%, slightly elevating risk.")
+        risk_factors_found = True
+
     if total_delinquencies > 0:
-        st.write("⚠️ **Delinquency History:** Past-due payments significantly increase default risk.")
+        st.write(f"⚠️ **Delinquency History:** Applicant has {total_delinquencies} historical late payment record(s).")
+        risk_factors_found = True
+
+    if debt_ratio > 0.4:
+        st.write("⚠️ **High Debt Ratio:** Over 40% of monthly income goes toward existing debt obligations.")
+        risk_factors_found = True
+
     if credit_score >= 700:
-        st.write("✅ **Strong Profile:** Healthy income-to-debt balance and low credit utilization.")
+        st.write("✅ **Strong Financial Profile:** Healthy income-to-debt ratio and low credit utilization.")
+        risk_factors_found = True
+
+    # Fallback message so the section is never blank
+    if not risk_factors_found:
+        st.write("ℹ️ **Fair Profile:** Balanced utilization and payment history, but score reflects moderate overall leverage.")
